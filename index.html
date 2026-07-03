@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony | Developer System Integrator</title>
+    <!-- Importando iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- VARIABLES DE COLOR (Tema Dark/Tech) --- */
+        :root {
+            --bg-main: #0d1117;
+            --bg-card: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-mc: #3fb950; /* Verde estilo Minecraft/GitHub */
+            --accent-blue: #58a6ff;
+            --border-color: #30363d;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p.subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-mc);
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        /* --- SECCIONES --- */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title i {
+            color: var(--accent-blue);
+        }
+
+        /* --- LISTAS DE ARSENAL TÉCNICO --- */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            border-color: var(--accent-mc);
+        }
+
+        .skills-list i {
+            font-size: 1.5rem;
+            color: var(--accent-mc);
+            margin-top: 4px;
+        }
+
+        /* --- GRID DE PROYECTOS --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .project-card .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            background: var(--accent-blue);
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 4px solid var(--bg-main);
+        }
+
+        .project-card h3 {
+            margin-top: 0.5rem;
+            color: var(--accent-blue);
+        }
+
+        /* --- TECH STACK BADGES --- */
+        .tech-stack-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .tech-stack-container img {
+            height: 28px;
+            border-radius: 4px;
+        }
+
+        /* --- CONTACTO --- */
+        .contact-box {
+            background: linear-gradient(145deg, #161b22, #0d1117);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .discord-tag {
+            display: inline-block;
+            background: #5865F2; /* Color oficial de Discord */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        .discord-tag i {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <h1>Hola, soy Anthony</h1>
+            <p class="subtitle">&lt; Developer System Integrator / Optimizer / MC Networks &gt;</p>
+        </header>
+
+        <!-- SOBRE MÍ -->
+        <section id="about">
+            <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> Sobre Mí</h2>
+            <p>Soy un apasionado del desarrollo y la infraestructura de Minecraft.</p>
+            <p>Mi camino en el mundo de Minecraft Java comenzó como el de muchos: jugando y administrando servidores comunitarios con amigos. Al ver los desafíos técnicos que implicaba mantener una comunidad activa y libre de lag, decidí ir más allá. Así fue como empecé a sumergirme en el código del servidor: analizando configuraciones, entendiendo la lógica de los archivos <code>.yml</code> y estudiando Java para comprender exactamente cómo interactúan los plugins.</p>
+            <p>Hoy en día, combino mis conocimientos de programación con una sólida experiencia en optimización e integración. Más que crear herramientas desde cero, mi enfoque principal es hacer que la infraestructura existente sea extremadamente estable y eficiente para garantizar una experiencia de juego superior bajo cualquier nivel de carga.</p>
+        </section>
+
+        <!-- ARSENAL TÉCNICO -->
+        <section id="skills">
+            <h2 class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> Mi Arsenal Técnico</h2>
+            <ul class="skills-list">
+                <li>
+                    <i class="fa-solid fa-server"></i>
+                    <div>
+                        <strong>Software de Servidor:</strong> PaperMC, Spigot, Purpur, Velocity, BungeeCord.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-database"></i>
+                    <div>
+                        <strong>Bases de Datos & Sincronización:</strong> MySQL, SQLite, MongoDB, Redis (Persistencia global de datos de usuarios).
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div>
+                        <strong>Diagnóstico de Rendimiento:</strong> Spark, Timings v2, Optimización de Java Garbage Collection (Aikar’s Flags).
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cubes"></i>
+                    <div>
+                        <strong>Gestión de Plugins Core:</strong> Configuración avanzada de LuckPerms, DeluxeMenus (GUIs dinámicas), PlaceholderAPI.
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code-branch"></i>
+                    <div>
+                        <strong>Herramientas de Entorno:</strong> Git, GitHub, lectura de Stacktraces/Consola en Java.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ENFOQUE EN PROYECTOS -->
+        <section id="projects">
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Mi Enfoque en Proyectos</h2>
+            <p style="margin-bottom: 2rem;">Dado que mi trabajo se centra en servidores privados y entornos de desarrollo locales, no cuento con un portafolio de plugins individuales creados desde cero. En su lugar, mis "proyectos" son <strong>casos de éxito de optimización</strong>:</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="step-number">1</div>
+                    <h3>Mitigación de Lag</h3>
+                    <p>Auditoría y limpieza de archivos de configuración pesados para eliminar picos de uso de CPU.</p>
+                </div>
+                <div class="project-card">
+                    <div class="step-number">2</div>
+                    <h3>Infraestructura Global</h3>
+                    <p>Interconexión de modalidades mediante proxies y bases de datos centralizadas.</p>
+                </div>
+                <div class="project-card">
+                    <div class="step-number">3</div>
+                    <h3>Interfaces Limpias</h3>
+                    <p>Creación de menús interactivos complejos optimizados para no saturar el hilo principal del servidor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK (Basado en la imagen) -->
+        <section id="tech">
+            <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Tech Stack</h2>
+            <div class="tech-stack-container">
+                <!-- Badges generados con shields.io para simular tu imagen -->
+                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+                <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
+                <img src="https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white" alt="Datadog">
+                <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare">
+                <img src="https://img.shields.io/badge/Linode-00A95C?style=for-the-badge&logo=linode&logoColor=white" alt="Linode">
+                <img src="https://img.shields.io/badge/OVH-123456?style=for-the-badge&logo=ovh&logoColor=white" alt="OVH">
+                <img src="https://img.shields.io/badge/Vultr-007BFC?style=for-the-badge&logo=vultr&logoColor=white" alt="Vultr">
+                <img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=for-the-badge&logo=digitalocean&logoColor=white" alt="DigitalOcean">
+                <img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" alt="JWT">
+                <img src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white" alt="Nodemon">
+                <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+                <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+                <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" style="border: none;">
+            <div class="contact-box">
+                <h2>📫 ¿Hablamos?</h2>
+                <p>Si buscas a alguien que mantenga tu red estable, segura y optimizada, hablemos.</p>
+                <div class="discord-tag">
+                    <i class="fa-brands fa-discord"></i> Anthxd2289
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 - Anthony | Creado con GitHub Pages</p>
+        </footer>
+    </div>
+
+</body>
+</html>
